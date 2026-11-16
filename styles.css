@@ -21,6 +21,10 @@ header{align-items:flex-start;flex-wrap:nowrap;gap:28px}.brand-block{min-width:0
 
 .donation-upi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:45px;background:var(--blue);padding:36px;margin-bottom:55px;align-items:center}.donation-qr-panel{text-align:center}.qr-view{display:block;position:relative;overflow:hidden;aspect-ratio:1;width:100%;max-width:340px;margin:0 auto 20px;background:white;border:12px solid white}.qr-view img{position:absolute;width:274.285714%;max-width:none;height:auto;left:-97.714286%;top:-88%}.upi-details{margin:20px 0}.upi-details dt{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-top:12px}.upi-details dd{margin:3px 0;font-size:15px;font-weight:600;overflow-wrap:anywhere}.donation-upi .form-help a{text-decoration:underline}.donation-upi .form-help{overflow-wrap:anywhere}@media(max-width:760px){.donation-upi{grid-template-columns:1fr;padding:24px;gap:30px}.donation-upi h2{font-size:38px}}
 
-/* Keep every footer destination available in the main navigation. */
-@media(min-width:1101px){#navigation{display:grid;grid-template-columns:repeat(3,max-content);gap:12px 24px;align-items:center}#navigation>a{display:block}#navigation .nav-donate{text-align:center}}
-@media(max-width:1100px){#navigation.open{max-height:70vh;overflow-y:auto}#navigation>a{display:block}}
+/* All navigation destinations share one menu on desktop and mobile. */
+.menu-toggle{display:block;padding:12px 20px;color:white;background:var(--navy);border:1px solid var(--navy);font-size:13px;flex-shrink:0;margin-top:5px}
+#navigation{display:none;position:absolute;top:100%;left:auto;right:5%;width:290px;max-width:90%;margin-top:0;padding:12px;background:var(--cream);border:1px solid var(--line);box-shadow:0 15px 30px #153d5220}
+#navigation.open{display:flex;flex-direction:column;align-items:stretch;gap:0;max-height:70vh;overflow-y:auto}
+#navigation>a{display:block;padding:12px 15px;font-size:14px;white-space:normal}
+#navigation .nav-donate{margin-top:6px}
+@media(max-width:760px){#navigation{left:0;right:0;width:100%;max-width:100%;padding:14px 5%}}
