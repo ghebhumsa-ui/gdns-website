@@ -28,3 +28,9 @@ header{align-items:flex-start;flex-wrap:nowrap;gap:28px}.brand-block{min-width:0
 #navigation>a{display:block;padding:12px 15px;font-size:14px;white-space:normal}
 #navigation .nav-donate{margin-top:6px}
 @media(max-width:760px){#navigation{left:0;right:0;width:100%;max-width:100%;padding:14px 5%}}
+
+/* Anchor the dropdown to its button and align the desktop letterhead. */
+.navigation-group{position:relative;flex-shrink:0;margin-top:5px}
+.navigation-group .menu-toggle{margin:0}
+.navigation-group #navigation{top:calc(100% + 8px);right:0;left:auto;width:290px;max-width:calc(100vw - 32px);margin:0;padding:12px}
+@media(min-width:1101px){header{align-items:flex-start}.brand-block{display:flex;align-items:flex-start;gap:36px;max-width:none}.brand-block .brand{flex-shrink:0}.brand-block .letterhead{margin:0;padding-left:28px;border-left:1px solid var(--line);font-size:11px;line-height:1.8}.letterhead p,.letterhead a{display:block}}
